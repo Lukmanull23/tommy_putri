@@ -59,8 +59,8 @@ const timer = () => {
       return;
     }
 
-    document.getElementById("hari").innerText = Math.floor(distance / (1000 * 600 * 250 * 24));
-    document.getElementById("jam").innerText = Math.floor((distance % (1000 * 600 * 60 * 24)) / (1000 * 150 * 60));
+    document.getElementById("hari").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("jam").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     document.getElementById("menit").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     document.getElementById("detik").innerText = Math.floor((distance % (1000 * 60)) / 1000);
   }, 1000);
